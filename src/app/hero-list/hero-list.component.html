@@ -1,0 +1,24 @@
+<div class="row">
+    <div *ngFor="let c of heroservice.cards" class="col-md-3">
+        <div [ngStyle]="{'background-color': c.power>=100 ? '#01473f' : c.power>= 80 ? '#2bbcab' : c.power>=50 ? '#fa6c18' : '#be76c8'}"
+            class="card mt-5">
+            <img class="card-img-top" style="padding: 10px;" [src]="c.img" alt="Card image cap">
+            <div class="card-body" style="color: white;">
+                <h5 class="card-title">Name : {{c.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-center mt-3">Power : {{c.power}}</h6>
+
+            </div>
+            <div style="display: flex; justify-items:flex-start; justify-content: space-around;">
+                <div>
+                    <button class="btn btn-danger" (click)="removeItem(c.id)">Delete</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning" (click)="updateItem(c)">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+</div>

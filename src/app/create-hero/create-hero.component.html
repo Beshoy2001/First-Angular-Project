@@ -1,0 +1,19 @@
+<div class="row mt-4 text-center">
+    <div class="col-3">
+
+        <input type="text" [(ngModel)]="currentCard.name" class="form-control" name="" id="" placeholder="Name" />
+
+    </div>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="currentCard.power" class="form-control" name="" id="" placeholder="Power" />
+    </div>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="currentCard.img" class="form-control" name="" id="" placeholder="Image" />
+    </div>
+    <div class="col-3">
+        <button name="" class="btn w-100" [ngClass]="IsUpdate ? 'btn-warning' : 'btn-primary'"
+            (click)="createCard()">{{IsUpdate ? 'Save' : 'Create'}} </button>
+
+    </div>
+</div>
+<app-hero-list></app-hero-list>
